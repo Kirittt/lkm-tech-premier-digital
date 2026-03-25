@@ -18,41 +18,44 @@ const Footer = () => {
 
   return (
     <footer className="relative overflow-hidden">
-      {/* Newsletter Banner */}
-      <div className="gradient-bg-primary">
+      {/* Newsletter Banner - BLACK */}
+      <div className="bg-black">
         <div className="container-max px-4 sm:px-6 lg:px-8 py-14 md:py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-                Stay Ahead of Technology Trends
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full bg-white/10 text-white/70 mb-4">
+                Newsletter
+              </span>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
+                Subscribe to LKM Tech
               </h3>
-              <p className="text-primary-foreground/80 text-base max-w-lg">
-                Subscribe to LKM Tech insights and receive the latest in cloud computing, cybersecurity, AI innovation, and hiring trends delivered weekly to your inbox.
+              <p className="text-white/60 text-base max-w-lg">
+                Stay ahead with the latest in cloud computing, cybersecurity, AI innovation, and hiring trends delivered weekly to your inbox.
               </p>
             </div>
             <div>
               <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
                 <div className="relative flex-1">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-primary-foreground/40" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white/30" />
                   <input
                     type="email"
                     placeholder="Enter your business email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground placeholder:text-primary-foreground/40 border border-primary-foreground/20 outline-none focus:border-primary-foreground/50 focus:bg-primary-foreground/15 transition-all text-sm"
+                    className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/8 backdrop-blur-sm text-white placeholder:text-white/30 border border-white/15 outline-none focus:border-white/40 focus:bg-white/12 transition-all text-sm"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-primary-foreground text-primary px-8 py-3.5 rounded-xl font-semibold hover:bg-primary-foreground/90 transition-all shrink-0 flex items-center justify-center gap-2 shadow-lg text-sm"
+                  className="gradient-bg-primary text-white px-8 py-3.5 rounded-xl font-semibold hover:opacity-90 transition-all shrink-0 flex items-center justify-center gap-2 shadow-lg text-sm"
                 >
                   {subscribed ? "Subscribed ✓" : (
                     <>Subscribe <Send className="h-4 w-4" /></>
                   )}
                 </button>
               </form>
-              <p className="text-primary-foreground/50 text-xs mt-3">
+              <p className="text-white/30 text-xs mt-3">
                 No spam. Unsubscribe anytime. By subscribing you agree to our Privacy Policy.
               </p>
             </div>
@@ -61,13 +64,13 @@ const Footer = () => {
       </div>
 
       {/* Main Footer */}
-      <div className="gradient-bg-dark text-primary-foreground/80">
+      <div className="gradient-bg-dark text-white/80">
         <div className="container-max px-4 sm:px-6 lg:px-8 pt-16 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
             {/* Brand */}
             <div className="lg:col-span-4">
               <img src={logo} alt="LKM Tech" className="h-14 w-auto mb-5 brightness-0 invert" />
-              <p className="text-sm leading-relaxed text-primary-foreground/60 mb-6 max-w-sm">
+              <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-sm">
                 LKM Tech delivers transformative IT services and strategic talent solutions that empower businesses and technology professionals to thrive in the digital era. We inspire innovation, educate teams, and elevate businesses to new heights.
               </p>
               <div className="flex gap-3">
@@ -82,9 +85,9 @@ const Footer = () => {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 rounded-lg bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 group"
+                    className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 group"
                   >
-                    <social.icon className="h-4 w-4 text-primary-foreground/50 group-hover:text-primary-foreground transition-colors" />
+                    <social.icon className="h-4 w-4 text-white/50 group-hover:text-white transition-colors" />
                   </a>
                 ))}
               </div>
@@ -92,7 +95,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="lg:col-span-2">
-              <h4 className="font-display font-semibold text-primary-foreground text-sm uppercase tracking-wider mb-5">Company</h4>
+              <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-5">Company</h4>
               <ul className="space-y-3 text-sm">
                 {[
                   { label: "Home", to: "/" },
@@ -103,7 +106,7 @@ const Footer = () => {
                   { label: "Contact Us", to: "/contact" },
                 ].map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-primary-foreground/50 hover:text-primary-foreground transition-colors inline-flex items-center gap-1 group">
+                    <Link to={l.to} className="text-white/50 hover:text-white transition-colors inline-flex items-center gap-1 group">
                       <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {l.label}
                     </Link>
@@ -114,7 +117,7 @@ const Footer = () => {
 
             {/* IT Services */}
             <div className="lg:col-span-2">
-              <h4 className="font-display font-semibold text-primary-foreground text-sm uppercase tracking-wider mb-5">IT Services</h4>
+              <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-5">IT Services</h4>
               <ul className="space-y-3 text-sm">
                 {[
                   "Cloud Solutions",
@@ -125,7 +128,7 @@ const Footer = () => {
                   "QA & Testing",
                 ].map((s) => (
                   <li key={s}>
-                    <Link to="/it-services" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors inline-flex items-center gap-1 group">
+                    <Link to="/it-services" className="text-white/50 hover:text-white transition-colors inline-flex items-center gap-1 group">
                       <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {s}
                     </Link>
@@ -136,7 +139,7 @@ const Footer = () => {
 
             {/* Recruitment */}
             <div className="lg:col-span-2">
-              <h4 className="font-display font-semibold text-primary-foreground text-sm uppercase tracking-wider mb-5">Recruitment</h4>
+              <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-5">Recruitment</h4>
               <ul className="space-y-3 text-sm">
                 {[
                   { label: "Staffing & Recruiting", to: "/recruitment" },
@@ -148,7 +151,7 @@ const Footer = () => {
                   { label: "Alumni Network", to: "/alumni-network" },
                 ].map((l) => (
                   <li key={l.label}>
-                    <Link to={l.to} className="text-primary-foreground/50 hover:text-primary-foreground transition-colors inline-flex items-center gap-1 group">
+                    <Link to={l.to} className="text-white/50 hover:text-white transition-colors inline-flex items-center gap-1 group">
                       <ArrowRight className="h-3 w-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {l.label}
                     </Link>
@@ -159,27 +162,27 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="lg:col-span-2">
-              <h4 className="font-display font-semibold text-primary-foreground text-sm uppercase tracking-wider mb-5">Get In Touch</h4>
+              <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-5">Get In Touch</h4>
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <Mail className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-primary-foreground/50">Email Us</p>
-                    <a href="mailto:info@lkmtech.com" className="text-primary-foreground hover:text-primary transition-colors">info@lkmtech.com</a>
+                    <p className="text-white/40">Email Us</p>
+                    <a href="mailto:info@lkmtech.com" className="text-white hover:text-primary transition-colors">info@lkmtech.com</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-primary-foreground/50">Call Us</p>
-                    <a href="tel:+15551234567" className="text-primary-foreground hover:text-primary transition-colors">+1 (555) 123-4567</a>
+                    <p className="text-white/40">Call Us</p>
+                    <a href="tel:+15551234567" className="text-white hover:text-primary transition-colors">+1 (555) 123-4567</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-primary-foreground/50">Location</p>
-                    <p className="text-primary-foreground/70">United States</p>
+                    <p className="text-white/40">Location</p>
+                    <p className="text-white/60">United States</p>
                   </div>
                 </li>
               </ul>
@@ -187,7 +190,7 @@ const Footer = () => {
           </div>
 
           {/* Trust badges / stats row */}
-          <div className="border-t border-primary-foreground/10 pt-8 mb-8">
+          <div className="border-t border-white/10 pt-8 mb-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
                 { value: "90+", label: "Projects Delivered" },
@@ -197,22 +200,22 @@ const Footer = () => {
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-display text-2xl md:text-3xl font-bold text-primary">{stat.value}</p>
-                  <p className="text-xs text-primary-foreground/40 mt-1">{stat.label}</p>
+                  <p className="text-xs text-white/40 mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-primary-foreground/40">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-white/40">
               © {new Date().getFullYear()} LKM Tech. All rights reserved. | Inspire. Educate. Elevate.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs text-primary-foreground/40">
-              <Link to="/privacy" className="hover:text-primary-foreground/70 transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-primary-foreground/70 transition-colors">Terms & Conditions</Link>
-              <Link to="/cookies" className="hover:text-primary-foreground/70 transition-colors">Cookie Policy</Link>
-              <Link to="/dmca" className="hover:text-primary-foreground/70 transition-colors">DMCA Policy</Link>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs text-white/40">
+              <Link to="/privacy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white/70 transition-colors">Terms & Conditions</Link>
+              <Link to="/cookies" className="hover:text-white/70 transition-colors">Cookie Policy</Link>
+              <Link to="/dmca" className="hover:text-white/70 transition-colors">DMCA Policy</Link>
             </div>
           </div>
         </div>
