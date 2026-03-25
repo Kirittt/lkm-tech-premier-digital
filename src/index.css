@@ -101,11 +101,16 @@
     background-image: var(--gradient-dark);
   }
   .hover-lift {
-    @apply transition-all duration-300;
+    @apply transition-all duration-300 ease-out;
   }
   .hover-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-card-hover);
+  }
+  .section-badge {
+    @apply inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full;
+    color: hsl(var(--primary));
+    background: hsl(var(--accent));
   }
 }
 

@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
+// Solutions page removed from navigation per user request
 import Solutions from "./pages/Solutions";
 import ITServices from "./pages/ITServices";
 import Recruitment from "./pages/Recruitment";
