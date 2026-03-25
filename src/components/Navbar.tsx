@@ -7,11 +7,13 @@ import logo from "@/assets/lkm-logo.png";
 const recruitmentLinks = [
   { label: "Staffing & Recruiting", to: "/recruitment" },
   { label: "Bench Sales", to: "/bench-sales" },
-  { label: "Placement Services", to: "/recruitment#placement" },
+  { label: "Placement Services", to: "/placement-services" },
   { label: "Job Categories", to: "/job-categories" },
   { label: "Administrative Services", to: "/admin-services" },
-  { label: "Contingent Staffing", to: "/recruitment#contingent" },
-  { label: "Direct Permanent Staffing", to: "/recruitment#permanent" },
+  { label: "Alumni Network", to: "/alumni-network" },
+  { label: "Contingent Staffing", to: "/contingent-staffing" },
+  { label: "Direct Permanent Staffing", to: "/direct-permanent" },
+  { label: "Additional Services", to: "/additional-services" },
 ];
 
 const navLinks = [
