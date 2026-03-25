@@ -22,6 +22,10 @@ import AdditionalServices from "./pages/AdditionalServices";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import CookiePolicy from "./pages/CookiePolicy";
+import DMCAPolicy from "./pages/DMCAPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
