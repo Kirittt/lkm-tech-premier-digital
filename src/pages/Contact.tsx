@@ -120,21 +120,46 @@ const Contact = () => {
               <ScrollReveal delay={0.15}>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-8">Contact Info</h2>
                 <div className="space-y-6">
-                  {[
-                    { icon: Mail, title: "Email", value: "info@lkmtech.com" },
-                    { icon: MapPin, title: "Location", value: "United States (Nationwide Coverage)" },
-                    { icon: Clock, title: "Business Hours", value: "Mon - Fri: 9am - 6pm EST" },
-                  ].map((item) => (
-                    <div key={item.title} className="flex items-start gap-4">
-                      <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shrink-0">
-                        <item.icon className="h-5 w-5 text-accent-foreground" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-foreground">{item.title}</p>
-                        <p className="text-sm text-muted-foreground">{item.value}</p>
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shrink-0">
+                      <Mail className="h-5 w-5 text-accent-foreground" />
                     </div>
-                  ))}
+                    <div>
+                      <p className="text-sm font-medium text-foreground">Email</p>
+                      <a href="mailto:info@lkmtech.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@lkmtech.com</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shrink-0">
+                      <Phone className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">Phone</p>
+                      <a href="tel:+17038141791" className="block text-sm text-muted-foreground hover:text-primary transition-colors">+1 (703) 814-1791</a>
+                      <a href="tel:+13074436591" className="block text-sm text-muted-foreground hover:text-primary transition-colors">+1 (307) 443-6591</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shrink-0">
+                      <MapPin className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">Location</p>
+                      <p className="text-sm text-muted-foreground">United States (Nationwide Coverage)</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shrink-0">
+                      <Clock className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">Business Hours</p>
+                      <p className="text-sm text-muted-foreground">Mon - Fri: 9am - 6pm EST</p>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Service Areas */}

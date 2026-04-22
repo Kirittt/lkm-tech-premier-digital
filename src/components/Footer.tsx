@@ -75,7 +75,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-3">
                 {[
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/lkm-tech", label: "LinkedIn", external: true },
                   { icon: Twitter, href: "#", label: "Twitter" },
                   { icon: Facebook, href: "#", label: "Facebook" },
                   { icon: Instagram, href: "#", label: "Instagram" },
@@ -85,6 +85,8 @@ const Footer = () => {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
+                    target={social.external ? "_blank" : undefined}
+                    rel={social.external ? "noopener noreferrer" : undefined}
                     className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-200 group"
                   >
                     <social.icon className="h-4 w-4 text-white/50 group-hover:text-white transition-colors" />
