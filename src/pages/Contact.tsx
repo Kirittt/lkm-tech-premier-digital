@@ -122,7 +122,6 @@ const Contact = () => {
                 <div className="space-y-6">
                   {[
                     { icon: Mail, title: "Email", value: "info@lkmtech.com" },
-                    { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
                     { icon: MapPin, title: "Location", value: "United States (Nationwide Coverage)" },
                     { icon: Clock, title: "Business Hours", value: "Mon - Fri: 9am - 6pm EST" },
                   ].map((item) => (
@@ -160,8 +159,8 @@ const Contact = () => {
                 {/* Emergency Support */}
                 <div className="mt-6 p-6 rounded-2xl border-2 border-primary/30 bg-accent">
                   <h3 className="font-display font-semibold text-card-foreground mb-2">🚨 Emergency Support</h3>
-                  <p className="text-sm text-muted-foreground mb-2">For urgent IT issues or critical staffing needs, our emergency team is available 24/7.</p>
-                  <p className="text-sm font-semibold text-primary">Emergency: +1 (555) 123-4568</p>
+                  <p className="text-sm text-muted-foreground mb-2">For urgent IT issues or critical staffing needs, our emergency team is available 24/7. Email us and we'll respond within the hour.</p>
+                  <a href="mailto:emergency@lkmtech.com" className="text-sm font-semibold text-primary hover:underline">emergency@lkmtech.com</a>
                 </div>
               </ScrollReveal>
             </div>
