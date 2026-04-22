@@ -122,7 +122,6 @@ const Contact = () => {
                 <div className="space-y-6">
                   {[
                     { icon: Mail, title: "Email", value: "info@lkmtech.com" },
-                    { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
                     { icon: MapPin, title: "Location", value: "United States (Nationwide Coverage)" },
                     { icon: Clock, title: "Business Hours", value: "Mon - Fri: 9am - 6pm EST" },
                   ].map((item) => (
