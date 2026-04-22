@@ -72,14 +72,27 @@ const Blog = () => {
           {/* Featured Post */}
           {posts.filter(p => p.featured).map((post) => (
             <ScrollReveal key={post.title}>
-              <div className="mb-12 p-8 md:p-10 rounded-2xl gradient-bg-primary text-primary-foreground">
-                <span className="text-xs font-semibold bg-primary-foreground/20 px-3 py-1 rounded-full">Featured</span>
-                <h2 className="font-display text-2xl md:text-3xl font-bold mt-4 mb-3">{post.title}</h2>
-                <p className="text-primary-foreground/80 max-w-2xl mb-4">{post.excerpt}</p>
-                <div className="flex items-center gap-4">
-                  <span className="text-sm text-primary-foreground/60">{post.date}</span>
-                  <span className="text-sm text-primary-foreground/60">·</span>
-                  <span className="text-sm text-primary-foreground/60">{post.category}</span>
+              <div className="mb-12 rounded-2xl overflow-hidden border border-border bg-card hover-lift grid md:grid-cols-2">
+                <div className="relative h-64 md:h-auto min-h-[280px]">
+                  <img
+                    src={categoryImages[post.category]}
+                    alt={post.title}
+                    loading="lazy"
+                    width={1280}
+                    height={768}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />
+                </div>
+                <div className="p-8 md:p-10 gradient-bg-primary text-primary-foreground flex flex-col justify-center">
+                  <span className="text-xs font-semibold bg-primary-foreground/20 px-3 py-1 rounded-full self-start">Featured</span>
+                  <h2 className="font-display text-2xl md:text-3xl font-bold mt-4 mb-3">{post.title}</h2>
+                  <p className="text-primary-foreground/80 mb-4">{post.excerpt}</p>
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm text-primary-foreground/60">{post.date}</span>
+                    <span className="text-sm text-primary-foreground/60">·</span>
+                    <span className="text-sm text-primary-foreground/60">{post.category}</span>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -90,7 +103,17 @@ const Blog = () => {
             {posts.filter(p => !p.featured).map((post, i) => (
               <ScrollReveal key={post.title} delay={i * 0.06}>
                 <div className="group rounded-2xl border border-border bg-card hover-lift overflow-hidden h-full flex flex-col">
-                  <div className="h-48 gradient-bg-primary opacity-80" />
+                  <div className="h-48 overflow-hidden relative">
+                    <img
+                      src={categoryImages[post.category]}
+                      alt={post.title}
+                      loading="lazy"
+                      width={1280}
+                      height={768}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+                  </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <span className="text-xs font-semibold text-primary">{post.category}</span>
                     <h3 className="font-display text-lg font-bold text-card-foreground mt-2 mb-2 group-hover:text-primary transition-colors">
