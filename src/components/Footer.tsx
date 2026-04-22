@@ -69,7 +69,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
             {/* Brand */}
             <div className="lg:col-span-4">
-              <img src={logo} alt="LKM Tech" className="h-14 w-auto mb-5 brightness-0 invert mix-blend-screen" />
+              <Link to="/" className="inline-flex items-center mb-5 group" aria-label="LKM Tech home">
+                <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-colors">
+                  <img
+                    src={logo}
+                    alt="LKM Tech"
+                    width={200}
+                    height={64}
+                    className="h-12 w-auto brightness-0 invert"
+                  />
+                </div>
+              </Link>
               <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-sm">
                 LKM Tech delivers transformative IT services and strategic talent solutions that empower businesses and technology professionals to thrive in the digital era. We inspire innovation, educate teams, and elevate businesses to new heights.
               </p>
