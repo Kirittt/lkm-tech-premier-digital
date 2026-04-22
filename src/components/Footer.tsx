@@ -76,15 +76,13 @@ const Footer = () => {
                 className="inline-flex items-center mb-5 group"
                 aria-label="LKM Tech home"
               >
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-colors">
-                  <img
-                    src={logo}
-                    alt="LKM Tech"
-                    width={200}
-                    height={64}
-                    className="h-16 w-auto"
-                  />
-                </div>
+                <img
+                  src={logo}
+                  alt="LKM Tech"
+                  width={220}
+                  height={220}
+                  className="h-28 w-auto group-hover:opacity-80 transition-opacity"
+                />
               </a>
               <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-sm">
                 LKM Tech delivers transformative IT services and strategic talent solutions that empower businesses and technology professionals to thrive in the digital era. We inspire innovation, educate teams, and elevate businesses to new heights.
