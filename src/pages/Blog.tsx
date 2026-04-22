@@ -2,6 +2,11 @@ import HeroSection from "@/components/HeroSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTASection from "@/components/CTASection";
 import heroImage from "@/assets/hero-services.jpg";
+import blogCloud from "@/assets/blog-cloud.jpg";
+import blogSecurity from "@/assets/blog-security.jpg";
+import blogAi from "@/assets/blog-ai.jpg";
+import blogSoftware from "@/assets/blog-software.jpg";
+import blogHiring from "@/assets/blog-hiring.jpg";
 import { Cloud, Shield, Brain, Code, TrendingUp, ArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
 
@@ -12,6 +17,14 @@ const categories = [
   { icon: Code, label: "Software Development" },
   { icon: TrendingUp, label: "Technology Hiring Trends" },
 ];
+
+const categoryImages: Record<string, string> = {
+  "Cloud Computing": blogCloud,
+  "Cybersecurity": blogSecurity,
+  "AI Innovation": blogAi,
+  "Software Development": blogSoftware,
+  "Technology Hiring Trends": blogHiring,
+};
 
 const posts = [
   { title: "The Future of Cloud Computing in Enterprise", category: "Cloud Computing", date: "March 15, 2026", excerpt: "Exploring how multi-cloud strategies are reshaping enterprise infrastructure and enabling organizations to achieve unprecedented scalability and cost efficiency.", featured: true },
