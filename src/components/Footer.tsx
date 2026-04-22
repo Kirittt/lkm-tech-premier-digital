@@ -75,7 +75,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-3">
                 {[
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/lkm-tech", label: "LinkedIn", external: true },
                   { icon: Twitter, href: "#", label: "Twitter" },
                   { icon: Facebook, href: "#", label: "Facebook" },
                   { icon: Instagram, href: "#", label: "Instagram" },
