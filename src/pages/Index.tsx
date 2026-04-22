@@ -2,6 +2,9 @@ import HeroSection from "@/components/HeroSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import CTASection from "@/components/CTASection";
 import heroImage from "@/assets/hero-home.jpg";
+import blogCloud from "@/assets/blog-cloud.jpg";
+import blogSecurity from "@/assets/blog-security.jpg";
+import blogAi from "@/assets/blog-ai.jpg";
 import { Link } from "react-router-dom";
 import {
   Cloud, Shield, Code, Lightbulb, Server, CheckCircle, Users, Zap,
@@ -86,9 +89,9 @@ const testimonials = [
 ];
 
 const blogPosts = [
-  { title: "The Future of Cloud Computing in Enterprise", category: "Cloud Computing", date: "March 15, 2026", excerpt: "Exploring how multi-cloud strategies are reshaping enterprise infrastructure and enabling organizations to achieve unprecedented scalability." },
-  { title: "Zero Trust Security: A Complete Guide", category: "Cybersecurity", date: "March 10, 2026", excerpt: "Understanding zero-trust architecture and why every enterprise needs it to protect against modern cyber threats." },
-  { title: "AI in Recruitment: Transforming Talent Acquisition", category: "AI Innovation", date: "March 5, 2026", excerpt: "How AI-powered tools are revolutionizing the way companies find top talent, from resume screening to candidate matching." },
+  { title: "The Future of Cloud Computing in Enterprise", category: "Cloud Computing", date: "March 15, 2026", excerpt: "Exploring how multi-cloud strategies are reshaping enterprise infrastructure and enabling organizations to achieve unprecedented scalability.", image: blogCloud },
+  { title: "Zero Trust Security: A Complete Guide", category: "Cybersecurity", date: "March 10, 2026", excerpt: "Understanding zero-trust architecture and why every enterprise needs it to protect against modern cyber threats.", image: blogSecurity },
+  { title: "AI in Recruitment: Transforming Talent Acquisition", category: "AI Innovation", date: "March 5, 2026", excerpt: "How AI-powered tools are revolutionizing the way companies find top talent, from resume screening to candidate matching.", image: blogAi },
 ];
 
 const stats = [
@@ -425,7 +428,17 @@ const Index = () => {
               <ScrollReveal key={post.title} delay={i * 0.08}>
                 <Link to="/blog">
                   <div className="group rounded-2xl border border-border bg-card hover-lift overflow-hidden h-full flex flex-col">
-                    <div className="h-48 gradient-bg-primary opacity-80 group-hover:opacity-100 transition-opacity" />
+                    <div className="h-48 overflow-hidden relative">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        loading="lazy"
+                        width={1280}
+                        height={768}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+                    </div>
                     <div className="p-6 flex-1 flex flex-col">
                       <span className="text-xs font-semibold text-primary">{post.category}</span>
                       <h3 className="font-display text-lg font-bold text-card-foreground mt-2 mb-2 group-hover:text-primary transition-colors">
