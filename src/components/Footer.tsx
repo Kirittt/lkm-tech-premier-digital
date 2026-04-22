@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
             {/* Brand */}
             <div className="lg:col-span-4">
-              <img src={logo} alt="LKM Tech" className="h-14 w-auto mb-5 brightness-0 invert" />
+              <img src={logo} alt="LKM Tech" className="h-14 w-auto mb-5 brightness-0 invert mix-blend-screen" />
               <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-sm">
                 LKM Tech delivers transformative IT services and strategic talent solutions that empower businesses and technology professionals to thrive in the digital era. We inspire innovation, educate teams, and elevate businesses to new heights.
               </p>
@@ -175,7 +175,8 @@ const Footer = () => {
                   <Phone className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                   <div>
                     <p className="text-white/40">Call Us</p>
-                    <a href="tel:+15551234567" className="text-white hover:text-primary transition-colors">+1 (555) 123-4567</a>
+                    <a href="tel:+17038141791" className="block text-white hover:text-primary transition-colors">+1 (703) 814-1791</a>
+                    <a href="tel:+13074436591" className="block text-white hover:text-primary transition-colors">+1 (307) 443-6591</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
