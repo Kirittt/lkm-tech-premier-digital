@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "@/assets/lkm-logo.png";
+import logo from "@/assets/lkm-logo-white.png";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter, Facebook, Instagram, Youtube, Send } from "lucide-react";
 
 const Footer = () => {
@@ -69,17 +69,23 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
             {/* Brand */}
             <div className="lg:col-span-4">
-              <Link to="/" className="inline-flex items-center mb-5 group" aria-label="LKM Tech home">
+              <a
+                href="https://lkmtech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center mb-5 group"
+                aria-label="LKM Tech home"
+              >
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-colors">
                   <img
                     src={logo}
                     alt="LKM Tech"
                     width={200}
                     height={64}
-                    className="h-12 w-auto brightness-0 invert"
+                    className="h-16 w-auto"
                   />
                 </div>
-              </Link>
+              </a>
               <p className="text-sm leading-relaxed text-white/50 mb-6 max-w-sm">
                 LKM Tech delivers transformative IT services and strategic talent solutions that empower businesses and technology professionals to thrive in the digital era. We inspire innovation, educate teams, and elevate businesses to new heights.
               </p>
